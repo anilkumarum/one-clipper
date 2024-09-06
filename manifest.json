@@ -2,9 +2,9 @@
 	"manifest_version": 3,
 	"minimum_chrome_version": "116",
 	"offline_enabled": true,
-	"name": "oneClipper - v3 web clipper for oneNote",
+	"name": "__MSG_extName__",
 	"short_name": "oneClipper",
-	"description": "Clip article,selected text, images to oneNote. Take screenshot & save to oneNote. Faster & more user-friendly than official oneNote",
+	"description": "__MSG_extDescription__",
 	"version": "0.0.24",
 	"author": "NoteRail",
 	"icons": {
@@ -13,7 +13,7 @@
 	},
 
 	"action": {
-		"default_title": "Open oneClipper",
+		"default_title": "Open oneClipper (Alt+O)",
 		"default_popup": "popup/index.html"
 	},
 
