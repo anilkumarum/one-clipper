@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oneClipper: web clipper for oneNote</title>
+    <script type="module" src="/crx-hmr.js"></script>
+
+</head>
+
+<body>
+    <h2 class="one-clipper"><img src="/icon-24.png" alt="" height="20">oneClipper</h2>
+    <section class="notebooks">
+        <label>
+            <span>&nbsp;Notebooks</span>
+            <select id="notebook"></select>
+        </label>
+        <label>
+            <span>&nbsp;Sections</span>
+            <select id="sections"></select>
+        </label>
+    </section>
+
+    <main>
+        <select name="pages" style="margin-bottom: -1.8em">
+        </select>
+        <button style="--btn-clr:dodgerblue" id="bookmark">
+            <svg class="bookmark" viewBox="0 0 24 24">
+                <path />
+            </svg>
+            <div>
+                <div id="bookmark_tab">Bookmark Tab</div>
+            </div>
+        </button>
+
+        <button style="--btn-clr:#ff6600" id="screenshot">
+            <svg class="screenshot" viewBox="0 0 24 24">
+                <path />
+            </svg>
+            <div>
+                <div id="capture_screenshot">Capture screenshot</div>
+                <kbd>Alt+S</kbd>
+            </div>
+        </button>
+
+        <button style="--btn-clr:limegreen" id="clipArticle">
+            <svg class="article" viewBox="0 0 24 24">
+                <path />
+            </svg>
+            <div>
+                <div id="clip_article">Clip Article</div>
+                <kbd>Alt+A</kbd>
+            </div>
+        </button>
+
+        <button style="--btn-clr:#9932cc" id="multiSelect">
+            <svg class="select" viewBox="0 0 24 24">
+                <path />
+            </svg>
+            <div>
+                <div id="multi_select_text">Multi Select Text</div>
+                <kbd>Alt+M</kbd>
+            </div>
+        </button>
+
+        <select name="note-list" style="margin-bottom: -1.8em" id="pdf_note_list" hidden></select>
+        <button style="--btn-clr:red" id="save_pdf_btn">
+            <svg class="pdf" viewBox="0 0 1024 1024">
+                <path />
+            </svg>
+            <div id="save_pdf_file">Save PDF file</div>
+        </button>
+
+        <select name="note-list" style="margin-bottom: -1.8em" id="video_note_list" hidden></select>
+        <button style="--btn-clr:red" id="embed_video_btn">
+            <svg class="youtube" viewBox="0 0 24 24">
+                <path />
+            </svg>
+            <div id="embed_video">Embed video</div>
+        </button>
+    </main>
+    <div id="open_panel_btn"><span id="open_side_panel">Open Panel</span> (<kbd>Alt+T</kbd>) </div>
+    <output id="snackbar" hidden></output>
+    <script type="module" src="./js/popup.js"></script>
+</body>
+
+</html>

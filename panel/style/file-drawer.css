@@ -1,0 +1,118 @@
+svg {
+	height: 1.4em;
+	vertical-align: middle;
+	fill: var(--icon-clr);
+	cursor: pointer;
+}
+
+li {
+	list-style-type: none;
+}
+
+:host {
+	height: 100%;
+	width: 60%;
+	padding: 0;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	box-shadow: var(--card);
+	background-color: var(--toolbar-bgc);
+	padding: 2px 0.4em;
+
+	& select,
+	& input {
+		border: none;
+		min-width: 18ch;
+		padding: 0.2em;
+		background-color: inherit;
+		color: inherit;
+	}
+}
+
+details {
+	position: relative;
+
+	& summary {
+		list-style-type: none;
+	}
+
+	& div {
+		position: absolute;
+		right: 0;
+		z-index: 1;
+		padding-inline: 0.2em;
+		margin-top: 2px;
+		box-shadow: var(--card);
+		background-color: var(--toolbar-bgc);
+
+		& input {
+			padding: 0.4em;
+		}
+	}
+}
+
+notebook-content {
+	display: flex;
+}
+
+note-sections {
+	height: 96.5vh;
+	box-shadow: var(--card);
+	background-color: var(--section-bgc);
+
+	&:focus-within {
+		position: absolute;
+
+		& span {
+			display: block;
+		}
+	}
+
+	& li {
+		padding: 0.4em;
+		margin-bottom: 0.2em;
+		display: flex;
+		align-items: center;
+		column-gap: 0.2em;
+
+		&:hover {
+			background-color: var(--hover-bgc);
+		}
+
+		&.open {
+			background-color: var(--avt-block-bgc);
+			--block-sdw-clr: 204 51 255;
+			box-shadow: inset -3px 3px 3px 0px rgb(var(--block-sdw-clr) / 0.5),
+				inset 3px -3px 3px 0px rgb(var(--block-sdw-clr) / 0.5);
+		}
+
+		& span {
+			display: none;
+			font-size: 0.88rem;
+			cursor: pointer;
+		}
+	}
+}
+
+note-pages {
+	& li {
+		padding: 0.4em;
+		margin-bottom: 0.2em;
+		display: flex;
+		align-items: center;
+		column-gap: 0.2em;
+
+		&:hover {
+			background-color: var(--hover-bgc);
+		}
+	}
+
+	& span {
+		text-wrap: nowrap;
+		font-size: 0.88rem;
+		cursor: pointer;
+	}
+}

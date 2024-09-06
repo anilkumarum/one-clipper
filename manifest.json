@@ -1,0 +1,108 @@
+{
+	"manifest_version": 3,
+	"minimum_chrome_version": "116",
+	"offline_enabled": true,
+	"name": "oneClipper - v3 web clipper for oneNote",
+	"short_name": "oneClipper",
+	"description": "Clip article,selected text, images to oneNote. Take screenshot & save to oneNote. Faster & more user-friendly than official oneNote",
+	"version": "0.0.24",
+	"author": "NoteRail",
+	"icons": {
+		"128": "icon-128.png",
+		"24": "icon-24.png"
+	},
+
+	"action": {
+		"default_title": "Open oneClipper",
+		"default_popup": "popup/index.html"
+	},
+
+	"side_panel": {
+		"default_path": "panel/index.html"
+	},
+
+	"options_page": "options/index.html",
+
+	"background": {
+		"service_worker": "background/background.js",
+		"type": "module"
+	},
+
+	"commands": {
+		"_execute_action": {
+			"suggested_key": {
+				"default": "Alt+O",
+				"windows": "Alt+O",
+				"mac": "Alt+O",
+				"linux": "Alt+O"
+			}
+		},
+		"screenshot": {
+			"suggested_key": {
+				"default": "Alt+S"
+			},
+			"description": "Capture screenshot"
+		},
+		"clip_article": {
+			"suggested_key": {
+				"default": "Alt+A"
+			},
+			"description": "Clip Article"
+		},
+		"multi_select_text": {
+			"suggested_key": {
+				"default": "Alt+M"
+			},
+			"description": "Multi select text"
+		}
+	},
+
+	"web_accessible_resources": [
+		{
+			"resources": [
+				"scripts/screenshot/crop-selector.js",
+				"scripts/screenshot/crop-box.js",
+				"scripts/screenshot/detect-height.js",
+				"scripts/screenshot/crop-action.js",
+				"scripts/screenshot/shot-cropper.css",
+				"scripts/highlighter/Highlighter.js",
+				"scripts/highlighter/HighlightRange.js",
+				"scripts/highlighter/highlighterCmd.js",
+				"scripts/clip-site/manual-clip-site.js",
+				"scripts/clip-site/clip-article.js",
+				"scripts/clip-site/mark-serializer/mark-serializer.js",
+				"scripts/clip-site/mark-serializer/enums.js",
+				"scripts/clip-site/mark-serializer/util.js",
+				"scripts/clip-site/Summary/summary.html"
+			],
+			"matches": ["<all_urls>"]
+		}
+	],
+
+	"externally_connectable": {
+		"matches": ["https://cloud.oneclipper.noterail.co/*"]
+	},
+
+	"declarative_net_request": {
+		"rule_resources": [
+			{
+				"id": "ruleset_request_header",
+				"enabled": true,
+				"path": "./request_header.json"
+			}
+		]
+	},
+
+	"permissions": [
+		"activeTab",
+		"contextMenus",
+		"declarativeNetRequestWithHostAccess",
+		"storage",
+		"scripting",
+		"sidePanel"
+	],
+
+	"optional_host_permissions": ["<all_urls>"],
+
+	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqQsqCQv//37JsrFLnUWfuXM/jIlm9gCmUmZjgZpSZdk5dp4kSV0abMaLRKY/CsghE9abtfrMjPj6dfZyhOXZJEJwOzP4H5iL/9jzluo/h9rWIgK7jEkFRo1ZbgPVcJtbeViQ5LP6WvjNlJPXHcYASNZ8DJc2zMfaq+BoEccSr8CVME7CXH38resZhzrUqRuPG5+NhHkk1ihqJygCFBJcz3SzJAHyK0ykJDIhpdf0rfDZkesn+TVMwTqAg7Da6YoounlBO0h3tQJNI7S/ocqlV0qcv3Cuqv4crZje4lvSu/HwCfX38h4Cdx0j51EoYSXWWiuLeHLMAOcEhIaKx3JtKwIDAQAB"
+}

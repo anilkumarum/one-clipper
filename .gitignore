@@ -1,0 +1,10 @@
+build
+crx-hmr.js
+notion_clipper.zip
+.vscode
+.TODO
+build.sh
+jsconfig.json
+biome.json
+
+

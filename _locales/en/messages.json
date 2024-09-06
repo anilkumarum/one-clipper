@@ -1,0 +1,209 @@
+{
+	"extName": {
+		"message": "oneClipper - v3 web clipper for oneNote",
+		"description": "Extension name"
+	},
+	"extDescription": {
+		"message": "Clip article,selected text, images to oneNote. Take screenshot & save to oneNote. Faster & more user-friendly than official oneNote",
+		"description": "Extension description"
+	},
+
+	"clip_to_onenote": {
+		"message": "Clip to OneNote",
+		"description": "Clip to OneNote context menu"
+	},
+
+	"bookmark_tab": {
+		"message": "Bookmark Tab",
+		"description": "Bookmark Tab"
+	},
+
+	"capture_screenshot": {
+		"message": "Capture screenshot",
+		"description": "Capture screenshot"
+	},
+
+	"clip_article": {
+		"message": "Clip Article",
+		"description": "Clip Article"
+	},
+
+	"multi_select_text": {
+		"message": "Multi Select Text",
+		"description": "Multi Select Text"
+	},
+
+	"open_side_panel": {
+		"message": "Open side panel",
+		"description": "Open side panel"
+	},
+	"open_pages": {
+		"message": "Open Pages",
+		"description": "Open Pages"
+	},
+
+	"insert": {
+		"message": "Insert",
+		"description": "Insert"
+	},
+
+	"inserting": {
+		"message": "Inserting...",
+		"description": "Insert"
+	},
+
+	"insert_all": {
+		"message": "Insert All",
+		"description": "Insert All"
+	},
+
+	"restore_open_notes": {
+		"message": "Restore open notes",
+		"description": "Restore open notes"
+	},
+
+	"report_bug": {
+		"message": "Report Bug",
+		"description": "Report Bug"
+	},
+
+	"just_one_click": {
+		"message": "Just one click",
+		"description": "Just one Click"
+	},
+
+	"sorry_something_went_wrong": {
+		"message": "Sorry, Something went wrong",
+		"description": "Sorry, Something went wrong"
+	},
+
+	"ctrl_c_tooltip": {
+		"message": "turn on/off ctrl+c listener on webpage",
+		"description": "ctrl+c listener tooltip"
+	},
+
+	"configuration": {
+		"message": "Configuration",
+		"description": "Configuration"
+	},
+
+	"enable_highlighter": {
+		"message": "Enable Highlighter",
+		"description": "Enable Highlighter"
+	},
+
+	"keyboard_shortcuts": {
+		"message": "Keyboard shortcuts",
+		"description": "Keyboard shortcuts"
+	},
+
+	"permission_required": {
+		"message": "Permission Required",
+		"description": "Permission Required"
+	},
+
+	"highlight_permission": {
+		"message": "Permission required to show highlighted text when you re-visit webpages",
+		"description": "Highlight Permission"
+	},
+
+	"article_clipped_to_onenote": {
+		"message": "Article clipped to oneNote",
+		"description": "Article clipped to oneNote"
+	},
+
+	"clip_selected": {
+		"message": "Clip Selected",
+		"description": "Clip Selected"
+	},
+
+	"cancel_selection": {
+		"message": "Cancel Selection",
+		"description": "Cancel Selection"
+	},
+
+	"selected_text_inserted": {
+		"message": "Selected text inserted",
+		"description": "Selected text inserted"
+	},
+
+	"insert_successfully": {
+		"message": "Insert successfully",
+		"description": "Insert successfully"
+	},
+
+	"tab_link_inserted": {
+		"message": "Tab link inserted",
+		"description": "Tab link inserted"
+	},
+
+	"pdf_file_inserted": {
+		"message": "PDF file inserted",
+		"description": "PDF file inserted"
+	},
+
+	"video_embeded": {
+		"message": "Video embeded",
+		"description": "Video embeded"
+	},
+
+	"connection_required": {
+		"message": "Connection required",
+		"description": "Connection required"
+	},
+
+	"something_went_wrong": {
+		"message": "Something went wrong",
+		"description": "Something went wrong"
+	},
+
+	"permission_denied": {
+		"message": "Permission denied",
+		"description": "Permission denied"
+	},
+
+	"Clip_Article": {
+		"message": "Clip Article",
+		"description": "Clip Article"
+	},
+
+	"give_access_to_oneclipper": {
+		"message": "Give access to oneClipper to insert clipped contents into oneNote",
+		"description": "Give access to oneClipper to insert clipped contents into oneNote"
+	},
+
+	"summarize_following_content_in_bullet_points": {
+		"message": "Summarize following content in bullet points",
+		"description": "Summarize following content in bullet points"
+	},
+
+	"create_mindmap_of_following_content": {
+		"message": "Create mindmap of following content",
+		"description": "Create mindmap of following content"
+	},
+
+	"show_highlight_of_following_content_in_bullet_points": {
+		"message": "Show highlight of following content in bullet points",
+		"description": "Show highlight of following content in bullet points"
+	},
+
+	"oAuth_token_expires_in_1hour": {
+		"message": "oAuth token expires in 1hour. Need permission to refresh token automatically",
+		"description": "oAuth token expires in 1hour. Need permission to refresh token automatically"
+	},
+
+	"we_dont_read_any_files": {
+		"message": "We don't read any files inside onenote.",
+		"description": "We don't read any files inside onenote."
+	},
+
+	"we_dont_edit_any_files": {
+		"message": "We don't edit any files inside onenote.",
+		"description": "We don't edit any files inside onenote."
+	},
+
+	"we_dont_save_any_user_personal_info": {
+		"message": "We don't save any user's personal info.",
+		"description": "We don't save any user's personal info."
+	}
+}

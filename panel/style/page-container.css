@@ -1,0 +1,135 @@
+page-container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5em;
+	margin-inline: 2px;
+	scrollbar-width: thin;
+
+	&:empty::before {
+		content: "Zero page opened.\A Open drawer and click on page\A to open pages";
+		white-space: pre;
+		color: red;
+		font-size: 1.2rem;
+		padding: 1em;
+	}
+
+	&:empty ~ copy-listener {
+		display: none;
+	}
+}
+
+page-card {
+	box-shadow: var(--card);
+	background-color: var(--page-card-bgc);
+	border-radius: 4px;
+	padding-bottom: 0.4em;
+
+	&:only-child {
+		flex-grow: 1;
+		& page-content {
+			min-height: 12lh;
+			max-height: 88vh;
+		}
+	}
+
+	&[selected] {
+		outline: 1px solid var(--main-clr);
+	}
+
+	&:has(page-content:empty) button {
+		background-color: grey;
+	}
+}
+
+page-toolbar {
+	padding: 0.2em 0.6em 0.2em 0.4em;
+	background-color: var(--page-toolbar-bgc);
+	box-shadow: var(--card);
+	border-radius: 4px 4px 0 0;
+	display: flex;
+	align-items: center;
+	position: relative;
+
+	& div {
+		line-height: 0.9;
+
+		& span {
+			display: block;
+			font-size: small;
+			overflow-x: hidden;
+			white-space: nowrap;
+			max-inline-size: 16ch;
+		}
+
+		& var {
+			font-size: x-small;
+			color: grey;
+		}
+	}
+
+	& button {
+		margin-left: auto;
+	}
+
+	&:hover .close-btn {
+		opacity: 1;
+	}
+
+	& .close-btn {
+		position: absolute;
+		right: -0.2em;
+		top: -0.5em;
+		opacity: 0;
+		transition: opacity 500ms ease-out;
+
+		& svg {
+			height: 1.2em;
+		}
+	}
+}
+
+page-content {
+	display: block;
+	width: 100%;
+	padding-inline: 0.4em;
+	min-height: 8lh;
+	max-height: 15lh;
+	overflow-y: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+
+	&::-webkit-scrollbar {
+		background-color: rgba(0, 0, 0, 0.3);
+		width: 2px;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	& a.bookmark {
+		display: block;
+		border: var(--border);
+		padding: 0.5em;
+		text-decoration: none;
+		margin-block: 4px;
+		overflow-wrap: break-word;
+
+		& span {
+			color: var(--txt-clr);
+			font-size: small;
+		}
+
+		& var {
+			display: block;
+			text-decoration: underline;
+			font-size: small;
+		}
+	}
+
+	& img {
+		max-width: 100%;
+		max-height: 30vh;
+		object-fit: cover;
+	}
+}

@@ -1,0 +1,49 @@
+top-bar {
+	padding: 2px 0.4em;
+	box-shadow: var(--card);
+	background-color: var(--toolbar-bgc);
+	display: flex;
+	justify-content: space-between;
+
+	& span {
+		font-weight: bold;
+	}
+}
+
+copy-listener {
+	/* display: none; */
+	position: fixed;
+	bottom: 0.3em;
+	left: 0.5em;
+
+	& svg {
+		height: 1.2em;
+	}
+
+	& clip-icon:--checked svg {
+		animation: beacon 2s infinite alternate;
+		transform-origin: center;
+
+		& line {
+			display: none;
+		}
+	}
+
+	& clip-icon:state(checked) svg {
+		animation: beacon 3s infinite alternate;
+		transform-origin: center;
+
+		& line {
+			display: none;
+		}
+	}
+}
+
+@keyframes beacon {
+	from {
+		scale: 1.1;
+	}
+	to {
+		scale: 0.9;
+	}
+}

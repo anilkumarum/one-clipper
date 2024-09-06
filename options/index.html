@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotionClipper configuration</title>
+</head>
+
+<body>
+    <h2>🛠️ Configuration </h2>
+    <div class="config-item">
+        <div class="setting-info">
+            <h3>🖍️ Enable Highlighter</h3>
+            <div>
+                <span>Show highlighted text when you re-visit page</span>
+            </div>
+        </div>
+
+        <label class="switch">
+            <input type="checkbox" id="toggle_highlight" />
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <dialog id="host-permission" style="width: 41ch;">
+        <h2>🔐 Permission Required</h2>
+        <p>
+            Permission required to show highlighted text when you re-visit webpages
+        </p>
+        <dl>
+            <dt>&ltall_urls&gt;</dt>
+            <dd>Inject script on any webpages to show saved highlighted text when you re-visit webpages</dd>
+        </dl>
+        <button style="display: block;margin-inline: auto;" autofocus>Grant Permission</button>
+    </dialog>
+
+    <script type="module" src="./options.js"></script>
+    <style>
+        body {
+            background-color: black;
+            color: rgb(245, 245, 245);
+        }
+    </style>
+</body>
+
+</html>

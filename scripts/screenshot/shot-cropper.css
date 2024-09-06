@@ -1,0 +1,182 @@
+:host {
+	--card: 0 1px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	--main-clr: hsl(273, 92%, 48%);
+	--border: 1px solid #ccc;
+	--toast-bgc: #333;
+	--toast-txt: rgb(255, 208, 0);
+}
+
+.overlay {
+	box-sizing: border-box;
+	font-size: 16px;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 8000;
+	border-color: rgb(128, 128, 128, 0.5);
+	border-style: solid;
+	border-width: 0px 0px 792px;
+
+	& * {
+		box-sizing: border-box;
+	}
+}
+
+.view-box {
+	width: 100%;
+	height: 100%;
+	outline: 0.18em dashed rgb(185, 41, 221, 0.8);
+	visibility: hidden;
+	cursor: grab;
+
+	& span,
+	& var {
+		background-color: #fff;
+		border: 2px solid rgb(185, 41, 221);
+		position: absolute;
+	}
+
+	& span {
+		--pos: -0.35em;
+		border-radius: 50%;
+		width: 0.7em;
+		height: 0.7em;
+
+		&.top-left {
+			top: var(--pos);
+			left: var(--pos);
+			cursor: nwse-resize;
+		}
+
+		&.top-right {
+			top: var(--pos);
+			right: var(--pos);
+			cursor: nesw-resize;
+		}
+
+		&.bottom-left {
+			bottom: var(--pos);
+			left: var(--pos);
+			cursor: nesw-resize;
+		}
+
+		&.bottom-right {
+			bottom: var(--pos);
+			right: var(--pos);
+			cursor: nwse-resize;
+		}
+	}
+
+	& var {
+		border-radius: 20%;
+		--size: min(20%, 1.8em);
+		--center: 48%;
+
+		&.left,
+		&.right {
+			--pos: -0.3em;
+			height: var(--size);
+			top: var(--center);
+		}
+
+		&.left {
+			left: var(--pos);
+			width: 0.5em;
+			cursor: ew-resize;
+		}
+
+		&.right {
+			right: var(--pos);
+			width: 0.5em;
+			cursor: ew-resize;
+		}
+
+		&.top,
+		&.bottom {
+			--pos: -0.32em;
+			width: var(--size);
+			height: 0.5em;
+			left: var(--center);
+		}
+
+		&.top {
+			top: var(--pos);
+			cursor: ns-resize;
+		}
+
+		&.bottom {
+			bottom: var(--pos);
+			cursor: ns-resize;
+		}
+	}
+}
+
+.crop-action {
+	display: flex;
+	flex-direction: row-reverse;
+	column-gap: 0.4em;
+	margin-top: 0.5em;
+
+	& select {
+		margin-right: -0.6em;
+		border: var(--border);
+		border-right: none;
+		max-width: 15ch;
+	}
+
+	& button {
+		display: flex;
+		column-gap: 0.3em;
+		border: none;
+		border-radius: 4px;
+		padding: 0.1em 0.5em;
+		font-weight: bold;
+		font-size: medium;
+		cursor: pointer;
+		border: 2px solid var(--main-clr);
+
+		& svg {
+			height: clamp(0.9em, 1vw + 1em, 1.5em);
+			vertical-align: middle;
+		}
+	}
+
+	& .capture {
+		box-shadow: var(--card);
+		background-color: var(--main-clr);
+		color: #ffff;
+		padding-left: 0;
+		position: relative;
+		border-radius: 0 0.4em 0.4em 0;
+
+		& svg {
+			list-style-type: none;
+			border-right: var(--border);
+		}
+	}
+}
+
+/* snackbar  */
+output {
+	min-width: 8em;
+	background-color: var(--toast-bgc);
+	color: var(--toast-txt);
+	text-align: center;
+	border-radius: 1em;
+	padding: 0.6em;
+	position: fixed;
+	z-index: 1000;
+	left: 40%;
+	bottom: 2em;
+	width: max-content;
+	translate: 0 200%;
+	animation: in-out 4s ease-out;
+}
+
+@keyframes in-out {
+	10%,
+	90% {
+		translate: 0 0;
+	}
+}
